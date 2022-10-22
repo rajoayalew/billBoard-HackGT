@@ -9,8 +9,10 @@ procedures = ["Knee Replacement", 'Percutaneous Coronary Angioplasty (PTCA)', 'L
 
 data = sqlite3.connect('data.db')
 cursor = data.cursor()
-procedure = procedures[random.randint(0,15)]
+# procedure = procedures[random.randint(0,15)]
+procedure = procedures[0]
 
 output = cursor.execute("SELECT proc_id FROM procedures WHERE name LIKE " + procedure)
 
-print(output[0]) 
+
+print(output.fetchall()) 
