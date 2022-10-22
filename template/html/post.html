@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <py-script src="./htmltosql.py"></py-script>
 </head>
 <body>
 
@@ -244,7 +247,7 @@
     
     
                 <!--Submit button-->
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
             </div>
           </form>
             
