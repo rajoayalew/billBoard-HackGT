@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
   <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/auto.css">
 
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
@@ -20,6 +21,8 @@
   <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <py-script src="./htmltosql.py"></py-script>
+
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
 </head>
 <body>
 
@@ -108,7 +111,9 @@
             <div class="form-group">
 
               <!--Procedure-->
-              
+              <!--JAVASCRIPT DROP DOWN STUFF-->
+
+
               <div class="autocomplete" style="width:300px;">
                 <input id="myInput" type="text" name="myCountry" placeholder="Country">
               </div>
@@ -119,6 +124,10 @@
                 <label for="inputProcedure" >Procedure Name<span style="color: red;"> *</span></label>
                 <input type="text" class="form-control" id="inputProcedure" placeholder="Search for the name of the procedure." required>
               </div>  
+
+              <script>
+                autocomplete(document.getElementById("myInput"), countries);
+                </script>
     
               <!--Cost wooo--> 
               
