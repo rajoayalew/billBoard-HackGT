@@ -2,7 +2,7 @@ import sqlite3
 import js
 from js import console
 
-data = sqlite3.connect('datas/data.db')
+data = sqlite3.connect('./datas/data.db')
 cursor = data.cursor()
 
 # It might look like its erroring but py-script comes built-in with the js module so ITS FINE 
