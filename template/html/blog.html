@@ -18,12 +18,12 @@
 
   <link rel="stylesheet" href="../assets/css/theme.css">
 </head>
-<script src = 'script.js'></script> 
+
 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 Cli
 <body>
-
+  <script src = "script.js"></script> 
   <!-- Back to top button -->
   <div class="back-to-top"></div>
   
@@ -76,6 +76,7 @@ Cli
     </div>
   </header>
 
+
   <div class="page-section">
     <div class="container">
       <div class="row">
@@ -102,7 +103,7 @@ Cli
       <div class = 'pythonsxn'> 
         <py-script> 
           import sqlite3;
-          sqliteConnection = sqlite3.connect('data.db');
+          sqliteConnection = sqlite3.connect('stuff/data.db');
           cursor = sqliteConnection.cursor()
           sql_command = """SELECT * FROM data where proc_id == selectedProc"""
           cursor.execute(sql_command)
@@ -110,6 +111,8 @@ Cli
         </py-script>
 
       </div>
+
+      <button id ="test"> test button </button>
 
 
 
