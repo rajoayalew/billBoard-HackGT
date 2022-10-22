@@ -1,5 +1,9 @@
 import csv
 import random
+import sqlite3
+
+data = sqlite3.connect('testdata.db')
+cursor = data.cursor()
 
 # Generates a .csv with data to be used for website test cases
 
@@ -24,7 +28,12 @@ with open('testcase.csv', 'w', newline='') as file:
     writer.writerow(['Simple Name', 'Price', 'Data of Procedure', 'Age', 'Gender', 'Data Added', 'Unique ID'])
     
     gender = ['M', 'Y', 'X']
-    for i in range(0, times):
+    states = [ 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA',
+           'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME',
+           'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM',
+           'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX',
+           'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+    for i in range(1, times+1):
         sprocedure = procedures[random.randint(0,len(procedures))]
         location = procedures.index(sprocedure)
         scost = cost[location]
@@ -62,9 +71,16 @@ with open('testcase.csv', 'w', newline='') as file:
 
         partGender = gender[random.randint(0,2)]
         uniqueID = i
+        state = states[random.randint(0,50)]
 
-        output = [sprocedure, scost, datepro, sage, partGender, dateadd, uniqueID]
+        proc_id = cursor.execute("SELECT proc_id FROM procedures WHERE name LIKE ?", sprocedure)
+
+        output = [uniqueID, proc_id, datepro, scost, sage, partGender, state]
+
+        cursor.execute("INSERT INTO entries VALUES(?, ?, ?, ?, ?, ?, ?)", output)
+
         writer.writerow(output)
+    data.commit()
 
 
         
