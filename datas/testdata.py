@@ -17,7 +17,7 @@ procedures = ["Knee Replacement", 'Percutaneous Coronary Angioplasty (PTCA)', 'L
 'Colon Resection','Scar Excision','Appendectomy','Hip/Femur Fracture','Coronary Artery Bypass Graft (CABG)',
 'Lower Extremity Fracture', 'MRI', 'CT Scan']
 
-cost = [15432.16181, 25550.07923, 28288.42665, 23885.19049, 19719.8712, 10989.9055, 18560.65432,
+avg_costs = [15432.16181, 25550.07923, 28288.42665, 23885.19049, 19719.8712, 10989.9055, 18560.65432,
 12574.90429, 18930.50093, 32236.16339, 9537.894685, 6309.512718, 32116.92964, 9998.73303, 1325, 3275]
 
 times = int(input("How many times do you want this to be run: "))
@@ -37,8 +37,10 @@ with open('testcase.csv', 'w', newline='') as file:
         # sprocedure = procedures[random.randint(0,len(procedures))]
         proc_id = random.randint(0,15)
         sprocedure = procedures[proc_id]
-        location = procedures.index(sprocedure)
-        scost = cost[location]
+
+        avg_cost = avg_costs[proc_id]
+        cost = avg_cost - ((avg_cost / 15) * random.randint(-3, 3))
+
         sage = random.randint(12,100)
     
         dateproyear = str(random.randint(2010,2022))
@@ -77,7 +79,7 @@ with open('testcase.csv', 'w', newline='') as file:
 
         # cursor.execute("SELECT proc_id FROM procedures WHERE name LIKE " + sprocedure + ";")
 
-        output = [proc_id + 1, datepro, scost, sage, partGender, state]
+        output = [proc_id + 1, datepro, cost, sage, partGender, state]
 
         cursor.execute("INSERT INTO entries VALUES(NULL, ?, ?, ?, ?, ?, ?)", output)
 
