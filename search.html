@@ -10,11 +10,12 @@
     <link rel="icon" href="media\medical-bill-icon.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-   
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
 
 </head>
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<script src = 'script.js'> </script> 
 
 <header>
     <div class="container">
@@ -27,6 +28,7 @@
 <body>
 
     <a href="index.html">go back to home page</a>
+    <h1>billBoard Price Comparison Tool</h1> 
 
 
     <form>
@@ -37,7 +39,7 @@
 
           <!--Procedure-->
           <div class="form-group">
-            <label for="inputProcedure" >Procedure Name<span style="color: red;"> *</span></label>
+            <label for="inputProcedure" >Procedure name<span style="color: red;"> *</span></label>
             <input type="text" class="form-control" id="inputProcedure" placeholder="Search for the name of the procedure." required>
           </div>
 
@@ -55,7 +57,7 @@
               <input type="text" class="form-control" id="inputCity">
             </div>
             <div class="form-group col-md-4">
-              <label for="inputState">State</label>
+              <label for="inputState">State<span style="color: red;"> *</span></label>
               <select id="inputState" class="form-control">
                 <option selected>---</option>
                 <option value="AL">Alabama</option>
@@ -175,7 +177,7 @@
 
 
             <!--Submit button-->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id ="generateEstim">Generate Price Estimate</button>
         </div>
       </form>
 

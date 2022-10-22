@@ -1,5 +1,9 @@
 import csv
 import random
+import sqlite3
+
+data = sqlite3.connect('testdata.db')
+cursor = data.cursor()
 
 # Generates a .csv with data to be used for website test cases
 
@@ -10,8 +14,8 @@ states = ['AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL',
 
 procedures = ['Knee Replacement', 'Percutaneous Coronary Angioplasty (PTCA)', 'Laminectomy',
 'Hip Replacement','Spinal Fusion','Cholecystectomy','Bone Excision','Hysterectomy',
-'Colon Resection','Scar excision','Appendectomy','Hip/Femur Fracture','Coronary Artery Bypass Graft (CABG)',
-'Lower extremity fracture', 'MRI', 'CT Scan']
+'Colon Resection','Scar Excision','Appendectomy','Hip/Femur Fracture','Coronary Artery Bypass Graft (CABG)',
+'Lower Extremity Fracture', 'MRI', 'CT Scan']
 
 cost = [15432.16181, 25550.07923, 28288.42665, 23885.19049, 19719.8712, 10989.9055, 18560.65432,
 12574.90429, 18930.50093, 32236.16339, 9537.894685, 6309.512718, 32116.92964, 9998.73303, 1325, 3275]
@@ -24,7 +28,12 @@ with open('testcase.csv', 'w', newline='') as file:
     writer.writerow(['Simple Name', 'Price', 'Data of Procedure', 'Age', 'Gender', 'Data Added', 'Unique ID'])
     
     gender = ['M', 'Y', 'X']
-    for i in range(0, times):
+    states = [ 'AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA',
+           'HI', 'IA', 'ID', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'ME',
+           'MI', 'MN', 'MO', 'MS', 'MT', 'NC', 'ND', 'NE', 'NH', 'NJ', 'NM',
+           'NV', 'NY', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX',
+           'UT', 'VA', 'VT', 'WA', 'WI', 'WV', 'WY']
+    for i in range(1, times+1):
         sprocedure = procedures[random.randint(0,len(procedures))]
         location = procedures.index(sprocedure)
         scost = cost[location]
@@ -62,9 +71,16 @@ with open('testcase.csv', 'w', newline='') as file:
 
         partGender = gender[random.randint(0,2)]
         uniqueID = i
+        state = states[random.randint(0,50)]
 
-        output = [sprocedure, scost, datepro, sage, partGender, dateadd, uniqueID]
+        proc_id = cursor.execute("SELECT proc_id FROM procedures WHERE name LIKE ?", sprocedure)
+
+        output = [uniqueID, proc_id, datepro, scost, sage, partGender, state]
+
+        cursor.execute("INSERT INTO entries VALUES(?, ?, ?, ?, ?, ?, ?)", output)
+
         writer.writerow(output)
+    data.commit()
 
 
         
