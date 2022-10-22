@@ -18,6 +18,10 @@
 
   <link rel="stylesheet" href="../assets/css/theme.css">
 </head>
+<script src = 'script.js'></script> 
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+Cli
 <body>
 
   <!-- Back to top button -->
@@ -26,7 +30,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky" data-offset="300">
       <div class="container">
-        <a href="#" class="navbar-brand">Seo<span class="text-primary">Gram.</span></a>
+        <a href="#" class="navbar-brand">bill<span class="text-primary">Board.</span></a>
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -65,10 +69,10 @@
             <nav aria-label="Breadcrumb">
               <ul class="breadcrumb justify-content-center py-0 bg-transparent">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Blog</li>
+                <li class="breadcrumb-item active">Search the billBoard</li>
               </ul>
             </nav>
-            <h1 class="text-center">Blog</h1>
+            <h1 class="text-center">Search the billBoard</h1>
           </div>
         </div>
       </div>
@@ -82,9 +86,9 @@
           <form action="#" class="form-search-blog">
             <div class="input-group">
               <div class="input-group-prepend">
-                <select id="categories" class="custom-select bg-light">
-                  <option>All Categories</option>
-                  <option value="travel">Travel</option>
+                <select id="procedures" class="custom-select bg-light">
+                  <option>Procedure</option>
+                  <option value="">Travel</option>
                   <option value="lifestyle">LifeStyle</option>
                   <option value="healthy">Healthy</option>
                   <option value="food">Food</option>
@@ -98,6 +102,20 @@
           <button class="btn btn-secondary">Filter <span class="mai-filter"></span></button>
         </div>
       </div>
+      <div class = 'pythonsxn'> 
+        <py-script> 
+          import sqlite3;
+          sqliteConnection = sqlite3.connect('data.db');
+          cursor = sqliteConnection.cursor()
+          sql_command = """SELECT * FROM data where proc_id == selectedProc"""
+          cursor.execute(sql_command)
+          connection.close()
+        </py-script>
+
+      </div>
+
+
+
 
       <div class="row my-5">
         <div class="col-lg-4 py-3">
