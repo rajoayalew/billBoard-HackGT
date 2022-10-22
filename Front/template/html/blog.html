@@ -114,9 +114,283 @@
 
       <button id ="test"> test button </button> -->
 
+      <div class="container-fluid mt-4">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 mb-5 mb-lg-0">
+            <form action="#" class="contact-form py-5 px-lg-5" autocomplete="off" action="/action_page.php">
+              <!-- <h2 class="mb-4 font-weight-medium text-secondary">Post to the billBoard</h2> -->
+              
+              <!--good Procedure dropdown-->
+  
+              <div class="row">
+                  
+                <div class="autocomplete form-group col-md-8">
+                    <label for="inputProcedure">Procedure Name <span style="color: red;"> *</span></label>
+                    <input class="form-control" id="myInput" type="text" name="myCountry" placeholder="Type procedure name ...">
+                </div>
+                
+                <!-- <div class="form-group">
+                  <label for="inputProcedure" >Procedure Name<span style="color: red;"> *</span></label>
+                  <input type="text" class="form-control" id="inputProcedure" placeholder="Search for the name of the procedure." required>
+                </div>   -->
+                <!--Cost wooo--> 
+                
+                <!-- <div class="form-group col-md-4">
+                  <label for="inputCost">Procedure Cost<span style="color: red;"> *</span></label>
+                  <input type="number" class="form-control" id="inputCost" placeholder="Approximate Cost" required>
+                </div>
+              </div> -->
+                
+              
+      
+                <!--location-->
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State <span style="color: red;"> *</span></label>
+                    <select id="inputState" class="form-control required">
+                      <option selected>---</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District Of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="number" class="form-control" id="inputZip">
+                  </div>
+              </div>  
+      
+      
+                  <!-- demographics
+                  <div class="row">
+                      <div class="form-group col-md-6">
+                        <label for="inputGender">Gender</label>
+                        <select id="inputGender" class="form-control">
+                          <option selected>---</option>
+                          <option value = "M">Male</option>
+                          <option value = "F">Female</option>
+                          <option value = "X">Other / Prefer Not to Say</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputAge">Age</label>
+                        <select id="inputAge" class="form-control">
+                          <option selected>---</option>
+                          <option value = "5">Less than 10</option>
+                          <option value = "15">11-20</option>
+                          <option value = "25">21-30</option>
+                          <option value = "35">31-40</option>
+                          <option value = "45">41-50</option>
+                          <option value = "55">51-60</option>
+                          <option value = "65">61-70</option>
+                          <option value = "75">71-80</option>
+                          <option value = "85">81-90</option>
+                          <option value = "95">91-100</option>
+                          <option value = "105">100+</option>
+                          <option values = "NULL">Other / Prefer Not to Say</option>
+                        </select>
+                      </div>
+                  </div> -->
+      
+                  <!--cost breakdown - make dynamically added fields if possible-->
+                  <!-- <div class="form-group">
+                    <label for="costBreakdown">Cost Breakdown</label>
+                    <textarea class="form-control" id="costBreakdown" rows="3" placeholder="Describe the breakdown of the procedure cost." required></textarea></textarea>
+                  </div>  -->
+      
+                  
+                  
+                  <!--verification-->    
+                  <!-- <div class="form-group form-check was-validated">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                      <label class="form-check-label" for="exampleCheck1">I certify that the entered information is true. <span style="color: red;"> *</span></label>
+                  </div> -->
+                  <!-- <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div> -->
+      
+      
+                  <!--Submit button-->
+                  <button type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
+              </div>
+            </form>
+              
+    
+        </div>
+      </div>
+      <script>
+        function autocomplete(inp, arr) {
+          /*the autocomplete function takes two arguments,
+          the text field element and an array of possible autocompleted values:*/
+          var currentFocus;
+          /*execute a function when someone writes in the text field:*/
+          inp.addEventListener("input", function(e) {
+              var a, b, i, val = this.value;
+              /*close any already open lists of autocompleted values*/
+              closeAllLists();
+              if (!val) { return false;}
+              currentFocus = -1;
+              /*create a DIV element that will contain the items (values):*/
+              a = document.createElement("DIV");
+              a.setAttribute("id", this.id + "autocomplete-list");
+              a.setAttribute("class", "autocomplete-items");
+              /*append the DIV element as a child of the autocomplete container:*/
+              this.parentNode.appendChild(a);
+              /*for each item in the array...*/
+              for (i = 0; i < arr.length; i++) {
+                /*check if the item starts with the same letters as the text field value:*/
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                  /*create a DIV element for each matching element:*/
+                  b = document.createElement("DIV");
+                  /*make the matching letters bold:*/
+                  b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                  b.innerHTML += arr[i].substr(val.length);
+                  /*insert a input field that will hold the current array item's value:*/
+                  b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                  /*execute a function when someone clicks on the item value (DIV element):*/
+                  b.addEventListener("click", function(e) {
+                      /*insert the value for the autocomplete text field:*/
+                      inp.value = this.getElementsByTagName("input")[0].value;
+                      /*close the list of autocompleted values,
+                      (or any other open lists of autocompleted values:*/
+                      closeAllLists();
+                  });
+                  a.appendChild(b);
+                }
+              }
+          });
+          /*execute a function presses a key on the keyboard:*/
+          inp.addEventListener("keydown", function(e) {
+              var x = document.getElementById(this.id + "autocomplete-list");
+              if (x) x = x.getElementsByTagName("div");
+              if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+                increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+              } else if (e.keyCode == 38) { //up
+                /*If the arrow UP key is pressed,
+                decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+              } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                  /*and simulate a click on the "active" item:*/
+                  if (x) x[currentFocus].click();
+                }
+              }
+          });
+          function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+          }
+          function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+              x[i].classList.remove("autocomplete-active");
+            }
+          }
+          function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+            except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+              if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+              }
+            }
+          }
+          /*execute a function when someone clicks in the document:*/
+          document.addEventListener("click", function (e) {
+              closeAllLists(e.target);
+          });
+        }
+        
+        /*An array containing all the country names in the world:*/
+        var procedures = ["Knee Replacement", "Percutaneous Coronary Angioplasty (PTCA)", "Laminectomy", "Hip Replacement", "Spinal Fusion", "Cholecystectomy", "Bone Excision", "Hysterectomy", "Colon Resection", "Scar Excision", "Appendectomy", "Hip/Femur Fracture", "Coronary Artery Bypass Graft (CABG)", "Lower Extremity Fracture", "MRI", "CT Scan"];
+        
+        
+        
+        
+        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+        autocomplete(document.getElementById("myInput"), procedures);
+        </script>
 
+        <!-- hidden DOM stuff that will end up containing the main response -->
+        <div> 
+            
+        </div>
 
-
+<!-- cards for storing the addnl  -->
       <div class="row my-5">
         <div class="col-lg-4 py-3">
           <div class="card-blog">
@@ -273,6 +547,8 @@
 
     </div>
   </div>
+
+
 
   <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
     <div class="container">
