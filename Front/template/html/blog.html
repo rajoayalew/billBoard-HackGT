@@ -75,6 +75,28 @@
                   <label for="inputProcedure">Procedure Name <span style="color: red;"> *</span></label>
                   <input class="form-control" id="myInput" type="text" name="myCountry" placeholder="Type procedure name ...">
               </div>
+
+              <script>
+                let selectedProc= (document.getElementById("myInput")).value
+                let costholder = document.getElementById("mediancost")
+                const obj = JSON.parse(id2proc);
+                const proc = obj.procnames.find((item) => item.procname === selectedProc);
+                let mediancost = proc.medianval;;
+                let mediancostcontainer = (document.getElementById('mediancostcontainer')).value
+                
+                let medianrevbutton = $('.medianreveal')
+                medianrevbutton.addEventListener('click', changemedian)
+                function changemedian(){
+                  let mediancostcontainer = mediancost;
+                }
+        
+                
+              
+              </script>
+              <!-- <script>
+                var selectedProc= (document.getElementById("myInput")).value
+                
+              </script> -->
               
               <!-- <div class="form-group">
                 <label for="inputProcedure" >Procedure Name<span style="color: red;"> *</span></label>
@@ -151,7 +173,11 @@
                 <!--Submit button-->
                 <div class="form-group col-md-">
                   <label for="inputState"><span style="color: white;"> .</span></label><br> <!--margin management-->
+<<<<<<< HEAD
                   <button onclick="clickButton()" type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
+=======
+                  <button onclick="hiddenDiv()" type="submit" id="button" class="btn btn-primary medianreveal" py-onClick="handle()">Submit</button>
+>>>>>>> 5bab89fbf3b300ea409569ddb6b64db0171963a1
                 </div>
                 
                 
@@ -397,7 +423,7 @@
         <!-- <div class="container" id="hiddenDiv" style="display:block">
           <div class="page-banner">
             <div class="row justify-content-center align-items-center h-100">
-              <h4><b>Search the billBoard for posted medical bills</b></h4>
+              <h4 id = 'mediancostcontainer'><b>Search the billBoard for posted medical bills</b></h4>
             </div>
           </div> -->
 
@@ -813,7 +839,8 @@ document.getElementById("d-price-1").innerHTML = "$" + obj.data[1].price;
         </div>
         
       </div>
-
+      <p class="text-center">Made by Raey, Samyutka, Grace, and Rikhil</p>
+      <p class="text-center">HackGT 2022</p>
       <p class="text-center" id="copyright">Copyright &copy; 2022. This template design and develop by <a href="https://macodeid.com/" target="_blank">MACode ID</a></p>
     </div>
   </footer>
