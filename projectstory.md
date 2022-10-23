@@ -19,4 +19,4 @@ We learned that whatever seems the easiest probably has some pitfalls and to pro
 We want to uncrease the functionality by adding fields for more data to be entered as well as more statistics about the data. More statistics than just the median will paint a better picture about the data. More data will allow us to also add more visualizations to the data like a map. We also want to be able to support any procedure and we want to properly implement the breakdown feature where you can enter in the full cost breakdown of each component procedure. We would also like to impliment bill scanner so users don't have to manually enter in all of the information. 
 
 ## Video Script
-This is billBoard. A crowd sourced medical cost database. We belive that people have the right to know how much
+Welcome to billBoard, a platform built on the idea that each person should have a honest representation of their medical bills. On the pl
