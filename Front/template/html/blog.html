@@ -151,7 +151,7 @@
                 <!--Submit button-->
                 <div class="form-group col-md-">
                   <label for="inputState"><span style="color: white;"> .</span></label><br> <!--margin management-->
-                  <button onclick="hiddenDiv()" type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
+                  <button onclick="clickButton()" type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
                 </div>
                 
                 
@@ -267,12 +267,12 @@
       <script>
 
         // hidden div func
-        function hiddenDiv() {
-          var T = document.getElementById("hiddenDiv");
-          T.style.display = "block";
-
+        function clickButton() {
           var U = document.getElementById("firstDiv");
           U.style.display = "none";
+
+          var T = document.getElementById("hiddenDiv");
+          T.style.display = "block";
         }
 
         // drop down menu
@@ -384,44 +384,222 @@
         </script>
 
         <!-- hidden DOM stuff that will end up containing the main response -->
-        <div class="container" id="firstDiv" style="display:block">
+        <div class="hidden-results" id="firstDiv" style="display:block"> 
+          <div class="container">
+            <div class="page-banner">
+              <div class="row justify-content-center align-items-center h-100">
+                <h4><b>Search the billBoard for posted medical bills</b></h4>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- <div class="container" id="hiddenDiv" style="display:block">
           <div class="page-banner">
             <div class="row justify-content-center align-items-center h-100">
               <h4><b>Search the billBoard for posted medical bills</b></h4>
             </div>
+          </div> -->
+
+          <!--all data - hardcoded-->
+          <!-- cards for storing the addn - STATIC PAGE -->
+      
+          <div class="row my-5">
+            <div class="col-lg-4 py-3">
+              <div class="card-blog">
+                <div class="body">
+                  <h5 class="post-title" id="price-1"></h5>
+                  <div class = "post-description">
+                    <p id="procedure-1"></p>
+                    <p id="location-1"></p>
+                    <p id="age-1"></p>
+                    <p id="gender-1"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 py-3">
+              <div class="card-blog">
+                <div class="body">
+                  <h5 class="post-title" id="price-2"></h5>
+                  <div class = "post-description">
+                    <p id="procedure-2"></p>
+                    <p id="location-2"></p>
+                    <p id="age-2"></p>
+                    <p id="gender-2"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-lg-4 py-3">
+              <div class="card-blog">
+                <div class="body">
+                  <h5 class="post-title" id="price-3"></h5>
+                  <div class = "post-description">
+                    <p id="procedure-3"></p>
+                    <p id="location-3"></p>
+                    <p id="age-3"></p>
+                    <p id="gender-3"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      <div class="col-lg-4 py-3">
+        <div class="card-blog">
+          <div class="body">
+            <h5 class="post-title" id="price-4"></h5>
+            <div class = "post-description">
+              <p id="procedure-4"></p>
+              <p id="location-4"></p>
+              <p id="age-4"></p>
+              <p id="gender-4"></p>
+            </div>
           </div>
         </div>
+      </div>
+      
+      <div class="col-lg-4 py-3">
+        <div class="card-blog">
+          <div class="body">
+            <h5 class="post-title" id="price-5"></h5>
+            <div class = "post-description">
+              <p id="procedure-5"></p>
+              <p id="location-5"></p>
+              <p id="age-5"></p>
+              <p id="gender-5"></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col-lg-4 py-3">
+        <div class="card-blog">
+          <div class="body">
+            <h5 class="post-title" id="price-6"></h5>
+            <div class = "post-description">
+              <p id="procedure-6"></p>
+              <p id="location-6"></p>
+              <p id="age-6"></p>
+              <p id="gender-6"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 py-3">
+        <div class="card-blog">
+          <div class="body">
+            <h5 class="post-title" id="price-7"></h5>
+            <div class = "post-description">
+              <p id="procedure-7"></p>
+              <p id="location-7"></p>
+              <p id="age-7"></p>
+              <p id="gender-7"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 py-3">
+        <div class="card-blog">
+          <div class="body">
+            <h5 class="post-title" id="price-8"></h5>
+            <div class = "post-description">
+              <p id="procedure-8"></p>
+              <p id="location-8"></p>
+              <p id="age-8"></p>
+              <p id="gender-8"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 py-3">
+        <div class="card-blog">
+          <div class="body">
+            <h5 class="post-title" id="price-9"></h5>
+            <div class = "post-description">
+              <p id="procedure-9"></p>
+              <p id="location-9"></p>
+              <p id="age-9"></p>
+              <p id="gender-9"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+        <!--DYNAMIC SEARCH PAGE-->
         <div class="hidden-results" id="hiddenDiv" style="display:none"> 
           <div class="container">
             <div class="page-banner">
               <div class="row justify-content-center align-items-center h-100">
-                <div class="col-md-6">
-                  <nav aria-label="Breadcrumb">
-                    <ul class="breadcrumb justify-content-center py-0 bg-transparent">
-                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                      <li class="breadcrumb-item active">Search the billBoard</li>
-                    </ul>
-                  </nav>
-                  <h1 class="text-center">Search the billBoard</h1>
+                <h4><b>Procedure Name Here </b></h4>
+                <h1 style="color: #6C55F9;">$1234.50</h1>
+              </div>
+            </div>
+          </div>
+
+
+            <!-- cards for storing the addn  -->
+      
+            <div class="row my-5">
+              <div class="col-lg-4 py-3">
+                <div class="card-blog">
+                  <div class="body">
+                    <h5 class="post-title" id="d-price-1"></h5>
+                    <div class = "post-description">
+                      <p id="d-procedure-1"></p>
+                      <p id="d-location-1"></p>
+                      <p id="d-age-1"></p>
+                      <p id="d-gender-1"></p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-            <!-- cards for storing the addnl  -->
+              
+              <div class="col-lg-4 py-3">
+                <div class="card-blog">
+                  <div class="body">
+                    <h5 class="post-title" id="d-price-2"></h5>
+                    <div class = "post-description">
+                      <p id="d-procedure-2"></p>
+                      <p id="d-location-2"></p>
+                      <p id="d-age-2"></p>
+                      <p id="d-gender-2"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
       
-      <div class="row my-5">
+              <div class="col-lg-4 py-3">
+                <div class="card-blog">
+                  <div class="body">
+                    <h5 class="post-title" id="d-price-3"></h5>
+                    <div class = "post-description">
+                      <p id="d-procedure-3"></p>
+                      <p id="d-location-3"></p>
+                      <p id="d-age-3"></p>
+                      <p id="d-gender-3"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
         <div class="col-lg-4 py-3">
           <div class="card-blog">
             <div class="body">
-              <h5 class="post-title">Price</h5>
+              <h5 class="post-title" id="d-price-4"></h5>
               <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
+                <p id="d-procedure-4"></p>
+                <p id="d-location-4"></p>
+                <p id="d-age-4"></p>
+                <p id="d-gender-4"></p>
               </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
             </div>
           </div>
         </div>
@@ -429,14 +607,13 @@
         <div class="col-lg-4 py-3">
           <div class="card-blog">
             <div class="body">
-              <h5 class="post-title">Price</h5>
+              <h5 class="post-title" id="d-price-5"></h5>
               <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
+                <p id="d-procedure-5"></p>
+                <p id="d-location-5"></p>
+                <p id="d-age-5"></p>
+                <p id="d-gender-5"></p>
               </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
             </div>
           </div>
         </div>
@@ -444,107 +621,18 @@
         <div class="col-lg-4 py-3">
           <div class="card-blog">
             <div class="body">
-              <h5 class="post-title">Price</h5>
+              <h5 class="post-title" id="d-price-6"></h5>
               <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
+                <p id="d-procedure-6"></p>
+                <p id="d-location-6"></p>
+                <p id="d-age-6"></p>
+                <p id="d-gender-6"></p>
               </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="body">
-              <h5 class="post-title">Price</h5>
-              <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
-              </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
-            </div>
-          </div>
-        </div>
         
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="body">
-              <h5 class="post-title">Price</h5>
-              <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
-              </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="body">
-              <h5 class="post-title">Price</h5>
-              <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
-              </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="body">
-              <h5 class="post-title">Price</h5>
-              <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
-              </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="body">
-              <h5 class="post-title">Price</h5>
-              <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
-              </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 py-3">
-          <div class="card-blog">
-            <div class="body">
-              <h5 class="post-title">Price</h5>
-              <div class = "post-description">
-                <p>Location: </p>
-                <p>Age: </p>
-                <p>Gender: </p>
-                <p>Cost Breakdown: </p>
-              </div>
-              <div class="post-date">Procedure Date: 27 Jan 2020</div>
-            </div>
-          </div>
-        </div>
 
       </div>
 
@@ -553,8 +641,8 @@
           <li class="page-item disabled">
             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item" aria-current="page">
             <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
           </li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -566,7 +654,7 @@
 
 
 
-        </div>
+    </div>
 
 
 
@@ -579,6 +667,123 @@
 </div> 
 
 
+<!--script to populate the card thingys-->
+<script>
+  let text = '{"data":[{"entry_id":1,"proc_id":13,"datetime":"2012-04-08 10:50:24","price":32116.92,"age":13,"gender":"X","state":"ID"},{"entry_id":2,"proc_id":2,"datetime":"2017-01-06 09:01:40","price":25550.07,"age":37,"gender":"M","state":"IN"},{"entry_id":3,"proc_id":9,"datetime":"2017-06-11 09:16:35","price":18930.52,"age":93,"gender":"X","state":"LA"},{"entry_id":4,"proc_id":12,"datetime":"2013-08-12 13:58:16","price":6309.51,"age":39,"gender":"M","state":"NJ"},{"entry_id":5,"proc_id":4,"datetime":"2012-11-04 16:48:52","price":23885.19,"age":22,"gender":"F","state":"NE"},{"entry_id":6,"proc_id":9,"datetime":"2017-07-04 19:37:36","price":18930.56,"age":82,"gender":"M","state":"ND"},{"entry_id":7,"proc_id":8,"datetime":"2020-03-14 09:26:58","price":12574.91,"age":98,"gender":"X","state":"VT"},{"entry_id":8,"proc_id":13,"datetime":"2019-05-03 17:29:57","price":32116.93,"age":58,"gender":"M","state":"RI"},{"entry_id":9,"proc_id":11,"datetime":"2016-01-20 01:58:00","price":9537.89,"age":86,"gender":"X","state":"FL"},{"entry_id":10,"proc_id":4,"datetime":"2018-05-11 11:09:35","price":23885.19,"age":92,"gender":"M","state":"IL"},{"entry_id":11,"proc_id":9,"datetime":"2013-06-19 04:16:45","price":18930.54,"age":88,"gender":"M","state":"DE"},{"entry_id":12,"proc_id":3,"datetime":"2010-08-29 15:15:29","price":28288.42,"age":78,"gender":"F","state":"KS"},{"entry_id":13,"proc_id":6,"datetime":"2018-06-02 24:58:25","price":10989.91,"age":89,"gender":"X","state":"PA"},{"entry_id":14,"proc_id":9,"datetime":"2019-10-18 01:34:45","price":18930.51,"age":16,"gender":"X","state":"PA"},{"entry_id":15,"proc_id":13,"datetime":"2022-06-18 06:59:32","price":32116.92,"age":32,"gender":"M","state":"FL"}]}';
+
+  const obj = JSON.parse(text);
+
+  
+  //CARDS FOR THE STATIC PAGE
+  //card 1
+  document.getElementById("price-1").innerHTML = "$" + obj.data[1].price;
+  document.getElementById("procedure-1").innerHTML = "Procedure: " + obj.data[1].proc_id;
+  document.getElementById("location-1").innerHTML = "Location: " + obj.data[1].state;
+  document.getElementById("age-1").innerHTML = "Patient Age: " + obj.data[1].age;
+  document.getElementById("gender-1").innerHTML = "Patient Gender: " + obj.data[1].gender;
+
+  //card 2
+  document.getElementById("price-2").innerHTML = "$" + obj.data[2].price;
+  document.getElementById("procedure-2").innerHTML = "Procedure: " + obj.data[2].proc_id;
+  document.getElementById("location-2").innerHTML = "Location: " + obj.data[2].state;
+  document.getElementById("age-2").innerHTML = "Patient Age: " + obj.data[2].age;
+  document.getElementById("gender-2").innerHTML = "Patient Gender: " + obj.data[2].gender;
+  
+  //card 3
+  document.getElementById("price-3").innerHTML = "$" + obj.data[3].price;
+  document.getElementById("procedure-3").innerHTML = "Procedure: " + obj.data[3].proc_id;
+  document.getElementById("location-3").innerHTML = "Location: " + obj.data[3].state;
+  document.getElementById("age-3").innerHTML = "Patient Age: " + obj.data[3].age;
+  document.getElementById("gender-3").innerHTML = "Patient Gender: " + obj.data[3].gender;
+
+  //card 4
+  document.getElementById("price-4").innerHTML = "$" + obj.data[4].price;
+  document.getElementById("procedure-4").innerHTML = "Procedure: " + obj.data[4].proc_id;
+  document.getElementById("location-4").innerHTML = "Location: " + obj.data[4].state;
+  document.getElementById("age-4").innerHTML = "Patient Age: " + obj.data[4].age;
+  document.getElementById("gender-4").innerHTML = "Patient Gender: " + obj.data[4].gender;
+  
+//card 5
+  document.getElementById("price-5").innerHTML = "$" + obj.data[5].price;
+  document.getElementById("procedure-5").innerHTML = "Procedure: " + obj.data[5].proc_id;
+  document.getElementById("location-5").innerHTML = "Location: " + obj.data[5].state;
+  document.getElementById("age-5").innerHTML = "Patient Age: " + obj.data[5].age;
+  document.getElementById("gender-5").innerHTML = "Patient Gender: " + obj.data[5].gender;
+
+  //card 6
+  document.getElementById("price-6").innerHTML = "$" + obj.data[6].price;
+  document.getElementById("procedure-6").innerHTML = "Procedure: " + obj.data[6].proc_id;
+  document.getElementById("location-6").innerHTML = "Location: " + obj.data[6].state;
+  document.getElementById("age-6").innerHTML = "Patient Age: " + obj.data[6].age;
+  document.getElementById("gender-6").innerHTML = "Patient Gender: " + obj.data[6].gender;
+
+  //card 7
+  document.getElementById("price-7").innerHTML = "$" + obj.data[7].price;
+  document.getElementById("procedure-7").innerHTML = "Procedure: " + obj.data[7].proc_id;
+  document.getElementById("location-7").innerHTML = "Location: " + obj.data[7].state;
+  document.getElementById("age-7").innerHTML = "Patient Age: " + obj.data[7].age;
+  document.getElementById("gender-7").innerHTML = "Patient Gender: " + obj.data[7].gender;
+
+  //card 8
+  document.getElementById("price-8").innerHTML = "$" + obj.data[8].price;
+  document.getElementById("procedure-8").innerHTML = "Procedure: " + obj.data[8].proc_id;
+  document.getElementById("location-8").innerHTML = "Location: " + obj.data[8].state;
+  document.getElementById("age-8").innerHTML = "Patient Age: " + obj.data[8].age;
+  document.getElementById("gender-8").innerHTML = "Patient Gender: " + obj.data[8].gender;
+
+  //card 9
+  document.getElementById("price-9").innerHTML = "$" + obj.data[9].price;
+  document.getElementById("procedure-9").innerHTML = "Procedure: " + obj.data[9].proc_id;
+  document.getElementById("location-9").innerHTML = "Location: " + obj.data[9].state;
+  document.getElementById("age-9").innerHTML = "Patient Age: " + obj.data[9].age;
+  document.getElementById("gender-9").innerHTML = "Patient Gender: " + obj.data[9].gender;
+
+  // DYNAMIC CARDS
+//dynamic card 1
+document.getElementById("d-price-1").innerHTML = "$" + obj.data[1].price;
+  document.getElementById("d-procedure-1").innerHTML = "Procedure: " + obj.data[1].proc_id;
+  document.getElementById("d-location-1").innerHTML = "Location: " + obj.data[1].state;
+  document.getElementById("d-age-1").innerHTML = "Patient Age: " + obj.data[1].age;
+  document.getElementById("d-gender-1").innerHTML = "Patient Gender: " + obj.data[1].gender;
+
+  //dynamic card 2
+  document.getElementById("d-price-2").innerHTML = "$" + obj.data[2].price;
+  document.getElementById("d-procedure-2").innerHTML = "Procedure: " + obj.data[2].proc_id;
+  document.getElementById("d-location-2").innerHTML = "Location: " + obj.data[2].state;
+  document.getElementById("d-age-2").innerHTML = "Patient Age: " + obj.data[2].age;
+  document.getElementById("d-gender-2").innerHTML = "Patient Gender: " + obj.data[2].gender;
+  
+  //dynamic card 3
+  document.getElementById("d-price-3").innerHTML = "$" + obj.data[3].price;
+  document.getElementById("d-procedure-3").innerHTML = "Procedure: " + obj.data[3].proc_id;
+  document.getElementById("d-location-3").innerHTML = "Location: " + obj.data[3].state;
+  document.getElementById("d-age-3").innerHTML = "Patient Age: " + obj.data[3].age;
+  document.getElementById("d-gender-3").innerHTML = "Patient Gender: " + obj.data[3].gender;
+
+  //dynamic card 4
+  document.getElementById("d-price-4").innerHTML = "$" + obj.data[4].price;
+  document.getElementById("d-procedure-4").innerHTML = "Procedure: " + obj.data[4].proc_id;
+  document.getElementById("d-location-4").innerHTML = "Location: " + obj.data[4].state;
+  document.getElementById("d-age-4").innerHTML = "Patient Age: " + obj.data[4].age;
+  document.getElementById("d-gender-4").innerHTML = "Patient Gender: " + obj.data[4].gender;
+  
+//dynamic card 5
+  document.getElementById("d-price-5").innerHTML = "$" + obj.data[5].price;
+  document.getElementById("d-procedure-5").innerHTML = "Procedure: " + obj.data[5].proc_id;
+  document.getElementById("d-location-5").innerHTML = "Location: " + obj.data[5].state;
+  document.getElementById("d-age-5").innerHTML = "Patient Age: " + obj.data[5].age;
+  document.getElementById("d-gender-5").innerHTML = "Patient Gender: " + obj.data[5].gender;
+
+  //dynamic card 6
+  document.getElementById("d-price-6").innerHTML = "$" + obj.data[6].price;
+  document.getElementById("d-procedure-6").innerHTML = "Procedure: " + obj.data[6].proc_id;
+  document.getElementById("d-location-6").innerHTML = "Location: " + obj.data[6].state;
+  document.getElementById("d-age-6").innerHTML = "Patient Age: " + obj.data[6].age;
+  document.getElementById("d-gender-6").innerHTML = "Patient Gender: " + obj.data[6].gender;
+
+
+
+</script>
 
   <footer class="page-footer bg-image" style="background-image: url(../assets/img/world_pattern.svg);">
     <div class="container">

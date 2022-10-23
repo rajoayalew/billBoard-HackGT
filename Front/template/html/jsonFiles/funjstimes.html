@@ -1,6 +1,81 @@
-for (var i = 0; i < data.length; i++) {
-             var div = document.createElement("div");
-             div.innerHTML = 'Procedure ID: ' + data[i].proc_id;
-             mainContainer.appendChild(div);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Test</title>
+</head>
+<body>
+    
+    <div class="row my-5">
+        <div class="col-lg-4 py-3">
+          <div class="card-blog">
+            <div class="body">
+              <h5 class="post-title">Price</h5>
+              <div class = "post-description">
+                <p id="procedure-1"></p>
+                <p id="location-1"></p>
+                <p id="age-1"></p>
+                <p id="gender-1"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 py-3">
+          <div class="card-blog">
+            <div class="body">
+              <h5 class="post-title">Price</h5>
+              <div class = "post-description">
+                <p id="procedure-2"></p>
+                <p id="location-2"></p>
+                <p id="age-2"></p>
+                <p id="gender-2"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 py-3">
+          <div class="card-blog">
+            <div class="body">
+              <h5 class="post-title">Price</h5>
+              <div class = "post-description">
+                <p id="procedure-3"></p>
+                <p id="location-3"></p>
+                <p id="age-3"></p>
+                <p id="gender-3"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <script>
+        let text = '{"data":[{"entry_id":1,"proc_id":13,"datetime":"2012-04-08 10:50:24","price":32116.92964,"age":13,"gender":"X","state":"ID"},{"entry_id":2,"proc_id":2,"datetime":"2017-01-06 09:01:40","price":25550.07923,"age":37,"gender":"M","state":"IN"},{"entry_id":3,"proc_id":9,"datetime":"2017-06-11 09:16:35","price":18930.50093,"age":93,"gender":"X","state":"LA"},{"entry_id":4,"proc_id":12,"datetime":"2013-08-12 13:58:16","price":6309.512718,"age":39,"gender":"M","state":"NJ"},{"entry_id":5,"proc_id":4,"datetime":"2012-11-04 16:48:52","price":23885.19049,"age":22,"gender":"F","state":"NE"}]}';
+
+        const obj = JSON.parse(text);
+        //card 1
+        document.getElementById("procedure-1").innerHTML = "Procedure: " + obj.data[1].proc_id;
+        document.getElementById("location-1").innerHTML = "Location: " + obj.data[1].state;
+        document.getElementById("age-1").innerHTML = "Patient Age: " + obj.data[1].age;
+        document.getElementById("gender-1").innerHTML = "Patient Gender: " + obj.data[1].gender;
+
+        //card 2
+        document.getElementById("procedure-2").innerHTML = "Procedure: " + obj.data[2].proc_id;
+        document.getElementById("location-2").innerHTML = "Location: " + obj.data[2].state;
+        document.getElementById("age-2").innerHTML = "Patient Age: " + obj.data[2].age;
+        document.getElementById("gender-2").innerHTML = "Patient Gender: " + obj.data[2].gender;
+        
+        //card 3
+        document.getElementById("procedure-3").innerHTML = "Procedure: " + obj.data[3].proc_id;
+        document.getElementById("location-3").innerHTML = "Location: " + obj.data[3].state;
+        document.getElementById("age-3").innerHTML = "Patient Age: " + obj.data[3].age;
+        document.getElementById("gender-3").innerHTML = "Patient Gender: " + obj.data[3].gender;
+        
+    </script>
+
+    
+</body>
+</html>
 
