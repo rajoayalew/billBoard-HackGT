@@ -17,9 +17,13 @@
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="../assets/css/theme.css">
+<<<<<<< Updated upstream
   <!-- <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
   <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   <py-script src="./htmltosql.py"></py-script> -->
+=======
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+>>>>>>> Stashed changes
 
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
 </head>
@@ -107,7 +111,7 @@
     <div class="container-fluid mt-4">
       <div class="row justify-content-center">
         <div class="col-lg-8 mb-5 mb-lg-0">
-          <form action="#" class="contact-form py-5 px-lg-5" autocomplete="off" action="/action_page.php">
+          <form action="http://localhost:3000/" method="POST" class="contact-form py-5 px-lg-5" autocomplete="off">
             <!-- <h2 class="mb-4 font-weight-medium text-secondary">Post to the billBoard</h2> -->
             
             <!--good Procedure dropdown-->
@@ -115,8 +119,8 @@
             <div class="row">
                 
               <div class="autocomplete form-group col-md-8">
-                  <label for="inputProcedure">Procedure Name <span style="color: red;"> *</span></label>
-                  <input class="form-control" id="myInput" type="text" name="myCountry" placeholder="Type procedure name ...">
+                  <label for="Procedure">Procedure Name <span style="color: red;"> *</span></label>
+                  <input class="form-control" id="Procedure" type="text" name="Procedure" placeholder="Type procedure name ...">
               </div>
               
               <!-- <div class="form-group">
@@ -126,8 +130,8 @@
               <!--Cost wooo--> 
               
               <div class="form-group col-md-4">
-                <label for="inputCost">Procedure Cost<span style="color: red;"> *</span></label>
-                <input type="number" class="form-control" id="inputCost" placeholder="Approximate Cost" required>
+                <label for="Cost">Procedure Cost<span style="color: red;"> *</span></label>
+                <input type="number" class="form-control" id="Cost" name="Cost" placeholder="Approximate Cost" required>
               </div>
             </div>
               
@@ -140,8 +144,8 @@
                   <input type="text" class="form-control" id="inputCity">
                 </div>
                 <div class="form-group col-md-4">
-                  <label for="inputState">State <span style="color: red;"> *</span></label>
-                  <select id="inputState" class="form-control required">
+                  <label for="State">State <span style="color: red;"> *</span></label>
+                  <select id="State" name="State" class="form-control required">
                     <option selected>---</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -206,8 +210,8 @@
                 <!--demographics-->
                 <div class="row">
                     <div class="form-group col-md-6">
-                      <label for="inputGender">Gender</label>
-                      <select id="inputGender" class="form-control">
+                      <label for="Gender">Gender</label>
+                      <select id="Gender" name="Gender" class="form-control">
                         <option selected>---</option>
                         <option value = "M">Male</option>
                         <option value = "F">Female</option>
@@ -215,8 +219,8 @@
                       </select>
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputAge">Age</label>
-                      <select id="inputAge" class="form-control">
+                      <label for="Age">Age</label>
+                      <select id="Age" name="Age" class="form-control">
                         <option selected>---</option>
                         <option value = "5">Less than 10</option>
                         <option value = "15">11-20</option>
@@ -260,7 +264,7 @@
     
     
                 <!--Submit button-->
-                <button type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
+                <button type="submit" id="button" class="btn btn-primary" >Submit</button>
             </div>
           </form>
             
