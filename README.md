@@ -1,3 +1,3 @@
 # billBoard
-weeeeeeeeeeeeeeeeeeeeeeeee uwu
-#samyukta trying to make github work
+creating a more equitable healthcare system, one bill at a time. 
+collection and comparison of medical bills 
