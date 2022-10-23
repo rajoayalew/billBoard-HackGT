@@ -14,10 +14,10 @@ router.post('/', function(req, res, next) {
   const sqlite3 = require('sqlite3').verbose();
   let db = new sqlite3.Database("data.db");
 
-  db.run('INSERT INTO entries VALUES (NULL, ?, datetime("now", "localtime"), ?, ?, ?, ?)', output);
+  db.run('INSERT INTO entries VALUES (NULL, ?, datetime("now", "localtime"), ?, ?, ?, ?)', [Procedure, Cost, State, Gender, Age]);
 
   db.close();
-  res.send({msg: "bruh"});
+  res.redirect("/Front/template/html/post.html")
   
 });
 
