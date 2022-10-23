@@ -1,7 +1,21 @@
-for (var i = 0; i < data.length; i++) {
+<!-- for (var i = 0; i < data.length; i++) {
              var div = document.createElement("div");
              div.innerHTML = 'Procedure ID: ' + data[i].proc_id;
              mainContainer.appendChild(div);
-}
+} -->
 
-let id2proc = '{"procnames": [' + '{"procid": "1", "procname": "Knee Replacement", "medianval": "$15,432.16"},'+'{"procid": "2", "procname": "Percutaneous Coronary Angioplasty (PTCA)", "medianval": "$25,550.08"},'+ '{"procid": "3", "procname": "Laminectomy", "medianval": "$28,288.43"},'+ '{"procid": "4", "procname": "Hip Replacement", "medianval": "$23,885.19"},'+ '{"procid": "5", "procname": "Spinal Fusion", "medianval": "$19,719.87"},'+ '{"procid": "6", "procname": "Cholecystectomy", "medianval": "$10,989.91"},'+ '{"procid": "7", "procname": "Bone Excision", "medianval": "$18,560.65"},'+ '{"procid": "8", "procname": "Hysterectomy", "medianval": "$12,574.90"},'+ '{"procid": "9", "procname": "Colon Resection", "medianval": "$18,930.50"},'+ '{"procid": "10", "procname": "Scar Excision", "medianval": "$32,236.16"},'+ '{"procid": "11", "procname": "Appendectomy", "medianval": "$9,537.89"},'+ '{"procid": "12", "procname": "Hip/Femur Fracture", "medianval": "$6,309.51"},'+ '{"procid": "13", "procname": "Coronary Artery Bypass Graft (CABG)", "medianval": "$32,116.93"},'+ '{"procid": "14", "procname": "Lower Extremity Fracture", "medianval": "$9,998.73"},'+ '{"procid": "15", "procname": "MRI", "medianval": "$1,325"},'+ '{"procid": "16", "procname": "CT Scan", "medianval": "$3,275"}]}'; 
+var id2proc = '{"procnames": [' + '{"procid": "1", "procname": "Knee Replacement", "medianval": "$15,432.16"},'+'{"procid": "2", "procname": "Percutaneous Coronary Angioplasty (PTCA)", "medianval": "$25,550.08"},'+ '{"procid": "3", "procname": "Laminectomy", "medianval": "$28,288.43"},'+ '{"procid": "4", "procname": "Hip Replacement", "medianval": "$23,885.19"},'+ '{"procid": "5", "procname": "Spinal Fusion", "medianval": "$19,719.87"},'+ '{"procid": "6", "procname": "Cholecystectomy", "medianval": "$10,989.91"},'+ '{"procid": "7", "procname": "Bone Excision", "medianval": "$18,560.65"},'+ '{"procid": "8", "procname": "Hysterectomy", "medianval": "$12,574.90"},'+ '{"procid": "9", "procname": "Colon Resection", "medianval": "$18,930.50"},'+ '{"procid": "10", "procname": "Scar Excision", "medianval": "$32,236.16"},'+ '{"procid": "11", "procname": "Appendectomy", "medianval": "$9,537.89"},'+ '{"procid": "12", "procname": "Hip/Femur Fracture", "medianval": "$6,309.51"},'+ '{"procid": "13", "procname": "Coronary Artery Bypass Graft (CABG)", "medianval": "$32,116.93"},'+ '{"procid": "14", "procname": "Lower Extremity Fracture", "medianval": "$9,998.73"},'+ '{"procid": "15", "procname": "MRI", "medianval": "$1,325"},'+ '{"procid": "16", "procname": "CT Scan", "medianval": "$3,275"}]}';
+
+<div class="autocomplete form-group col-md-7">
+    <label for="inputProcedure">Procedure Name <span style="color: red;"> *</span></label>
+    <input class="form-control" id="testInput" type="text" name="myCountry" placeholder="Type procedure name ...">
+    <p id = "mediancost"> </p>
+</div>
+<script>
+  var selectedProc= (document.getElementById("testInput")).value
+  var costholder = document.getElementById("mediancost")
+  const obj = JSON.parse(id2proc);
+  const proc = obj.procnames.find((item) => item.procname === selectedProc);
+  let mediancost = proc.medianval
+
+</script>
