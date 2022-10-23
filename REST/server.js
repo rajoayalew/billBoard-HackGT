@@ -15,7 +15,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/api/users", (req, res, next) => {
-    var sql = "select * from entries limit 48;"
+    var sql = "select * from entries limit 1000;"
     var params = []
     db.all(sql, params, (err, rows) => {
         if (err) {
