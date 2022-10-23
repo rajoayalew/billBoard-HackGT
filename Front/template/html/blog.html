@@ -59,6 +59,8 @@
       </div>
     </nav>
 
+    <!-- <div class="container">
+=======
     <div class="container-fluid mt-4">
       <div class="row justify-content-center">
         <div class="col-lg-8 mb-5 mb-lg-0">
@@ -67,7 +69,7 @@
             
             <!--good Procedure dropdown-->
 
-            <div class="row">
+            <div class="row" style="padding-left: 10%">
                 
               <div class="autocomplete form-group col-md-7">
                   <label for="inputProcedure">Procedure Name <span style="color: red;"> *</span></label>
@@ -147,7 +149,7 @@
                 </div>
 
                 <!--Submit button-->
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-">
                   <label for="inputState"><span style="color: white;"> .</span></label><br> <!--margin management-->
                   <button onclick="hiddenDiv()" type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
                 </div>
@@ -213,7 +215,12 @@
     
             </div>
           </form>
+      
+    </div>
+
   </header>
+
+      
 
 
   <!-- <div class="page-section">
@@ -263,6 +270,9 @@
         function hiddenDiv() {
           var T = document.getElementById("hiddenDiv");
           T.style.display = "block";
+
+          var U = document.getElementById("firstDiv");
+          U.style.display = "none";
         }
 
         // drop down menu
@@ -374,6 +384,14 @@
         </script>
 
         <!-- hidden DOM stuff that will end up containing the main response -->
+        <div class="container" id="firstDiv" style="display:block">
+          <div class="page-banner">
+            <div class="row justify-content-center align-items-center h-100">
+              <h4><b>Search the billBoard for posted medical bills</b></h4>
+            </div>
+          </div>
+        </div>
+
         <div class="hidden-results" id="hiddenDiv" style="display:none"> 
           <div class="container">
             <div class="page-banner">
