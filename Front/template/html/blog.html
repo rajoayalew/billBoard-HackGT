@@ -86,7 +86,6 @@
               </div>
             </div> -->
               
-            
     
               <!--location-->
                 <div class="form-group col-md-3">
@@ -148,7 +147,11 @@
                 </div>
 
                 <!--Submit button-->
-                <button type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
+                <div class="form-group col-md-2">
+                  <label for="inputState"><span style="color: white;"> .</span></label><br> <!--margin management-->
+                  <button onclick="hiddenDiv()" type="submit" id="button" class="btn btn-primary" py-onClick="handle()">Submit</button>
+                </div>
+                
                 
             </div>  
     
@@ -210,22 +213,6 @@
     
             </div>
           </form>
-
-    <div class="container">
-      <div class="page-banner">
-        <div class="row justify-content-center align-items-center h-100">
-          <div class="col-md-6">
-            <nav aria-label="Breadcrumb">
-              <ul class="breadcrumb justify-content-center py-0 bg-transparent">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Search the billBoard</li>
-              </ul>
-            </nav>
-            <h1 class="text-center">Search the billBoard</h1>
-          </div>
-        </div>
-      </div>
-    </div>
   </header>
 
 
@@ -271,6 +258,14 @@
         </div>
       </div>
       <script>
+
+        // hidden div func
+        function hiddenDiv() {
+          var T = document.getElementById("hiddenDiv");
+          T.style.display = "block";
+        }
+
+        // drop down menu
         function autocomplete(inp, arr) {
           /*the autocomplete function takes two arguments,
           the text field element and an array of possible autocompleted values:*/
@@ -379,11 +374,24 @@
         </script>
 
         <!-- hidden DOM stuff that will end up containing the main response -->
-        <div> 
-            
-        </div>
-
-<!-- cards for storing the addnl  -->
+        <div class="hidden-results" id="hiddenDiv" style="display:none"> 
+          <div class="container">
+            <div class="page-banner">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-md-6">
+                  <nav aria-label="Breadcrumb">
+                    <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                      <li class="breadcrumb-item active">Search the billBoard</li>
+                    </ul>
+                  </nav>
+                  <h1 class="text-center">Search the billBoard</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- cards for storing the addnl  -->
+      
       <div class="row my-5">
         <div class="col-lg-4 py-3">
           <div class="card-blog">
@@ -538,8 +546,19 @@
         </ul>
       </nav>
 
+
+
+        </div>
+
+
+
+
+      
+
     </div>
   </div>
+
+</div> 
 
 
 
