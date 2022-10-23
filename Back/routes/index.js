@@ -17,7 +17,7 @@ router.post('/', function(req, res, next) {
   db.run('INSERT INTO entries VALUES (NULL, ?, datetime("now", "localtime"), ?, ?, ?, ?)', output);
 
   db.close();
-  res.send({msg: "bruh"});
+  res.redirect(/Front/template/html/post.html)
   
 });
 
