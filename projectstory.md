@@ -1,22 +1,32 @@
 ## Inspiration
+From the beginning, our team was driven to create an application to improve the quality of life and accessibility of daily services. After researching issues experienced by vulnerable populations and minority groups in healthcare and medicine, we came to the realization that medical bill transparency is a major issue across the United States.
 
 ## What it does
-billBoard increases transparency in medical costs by crowd sourcing data on procedures and pricing from around the country. Users are able to upload how much certain common medical procedures cost them in order to create a searchable database for patients to know whether or not they are paying too much. Users are able to search by procedure and filter by state to see what other people paid as well as the median cost of the procedure. Greater transparency in the cost allows for patients to be better educated about their procedures and to protect them from predatory practices from hospitals and insurance companies trying to line their pockets. 
+billBoard creates a more equitable healthcare system, one bill at a time. billBoard increases transparency in medical costs by collecting and comparing data on the most common medical procedures and their average pricing in different states across the country. The billBoard platform features data collection, analysis and verification, and comparison of medical bill data, contributed by our diverse user community. By analyzing and presenting this data, billBoard can be used to help users better understand their expected medical bill costs.
+
+Users are able to “post a bill” with information from their previous medical bills to add to the “billBoard,” where other users are able to search for medical bills of particular procedures. All posts are anonymous and the data of each user is not shared.
+
+Currently, billBoard takes in data from the “post a bill” website form once a user inputs information about their relevant medical experience (their “bill”). This data is then sent to a server-side relational SQL database using the HTML Post Request API. This API can write to and receive information from the database, where bill information is stored. 
+
+As of now, the website is only able to display static medical bill information pre-generated from a Python script on the “billBoard” for a specific test case. Our team is passionate about billBoard and hopes to create a working search function to retrieve dynamic data from the database and display it on the website in real-time.
 
 ## How we built it
-We used a Bootstrap template for the UI that was paired with JavaScript, Node.js, and a SQLite database back end. The user inputs data into the form which is then inserted into a server side relational database. The user can then search the data where the SQLite table is queried and gives the entries that match the search to then be displayed by the front end. In order to test functionality, a python script was used to generate thousands ofrandom but still realistic user entries from around country. 
+The billBoard website was built from a Bootstrap template with customized HTML/CSS, taking inspiration from Figma, Google Fonts API, and Coolors.co. JavaScript, Express.js, Node.js, and an SQL (SQLite) database were used in the backend. 
+
+Our team also built a Python script to automatically generate thousands of statistically-correct random numbers in order to imitate realistic user entries for the billBoard.
 
 ## Challenges we ran into
-Because we did not have much experience with JavaScript, we initially tried to have PyScript (python in HTML) be the interface between the input form and the database because we were more comfortable with python. PyScript was not a good tool to use for this as it would have required the entire database to be on the client side to be used. This system was flawed in that there was no real front end and back end and could not be used as a web app. We were guided by one of the mentors to abandon the PyScript route with only 10 hours left until the deadline, and we had to then teach ourselves JavaScript and Node.js, and how to actually set up a front end and back end. 
+Initially, our team planned to use PyScript (Python in HTML) as the interface between the input form and the database. However, PyScript requires the entire database to be on the client side, so it would not be compatible with a web app.
+
+With only ten hours left until the submission deadline and the backend yet to be assembled, we decided to switch routes and use Node.js and Express.js to build the backend. After self-teaching both frameworks and rebuilding the backend, the frontend was reconfigured to seamlessly connect the SQL database and the datasets. In the future, our team hopes to create a working search function to retrieve dynamic data from the database and display it on the website in real-time.
 
 ## Accomplishments that we're proud of
-We are reallly proud of how flexible we were when our initial plans did not work out. Even though we had spent so much time in PyScript, we were still able to pivot quickly and take the development in a whole new direction without much time left. We are also proud with how we planned as we went and how well we worked together as it allowed us to make the big change in the end. 
+Our team is extremely proud of our collaboration, flexibility, and passion during HACKGT. When  things did not go as initially planned, the team was able to quickly pivot and take the development in a completely different direction, even with little time remaining.
+
+Most of all, we are proud of how we leveraged each members’ unique skills and abilities to cooperate and make a significant, fulfilling final product.
 
 ## What we learned
-We learned that whatever seems the easiest probably has some pitfalls and to properly research what we are trying to do before commiting to something. We used PyScript simply because we did not have a lot of JavaScript experience, even though that is what is used in most websites like this. We should have properly looked into the functionality of PyScript rather than just using it because we knew python. We also learned a lot of JavaScript in the last 10 hours and how to set a proper back end and front end for a website. 
+Over the course of 36 hours, our team learned to continue adjusting and improving to new situations and challenges. We learned to face problems head on, including Javascript.  At the beginning, our team planned to use PyScript to interact with web pages instead of using Javascript. However, there were some limitations with PyScript, which led us to rewrite the entire backend of the project with ten hours to spare. Even so, the team was able to adapt by self-teaching Node.js and Express.js while pressed for time. In the end, billBoard regained almost all functionality.
 
 ## What's next for billBoard
-We want to uncrease the functionality by adding fields for more data to be entered as well as more statistics about the data. More statistics than just the median will paint a better picture about the data. More data will allow us to also add more visualizations to the data like a map. We also want to be able to support any procedure and we want to properly implement the breakdown feature where you can enter in the full cost breakdown of each component procedure. We would also like to impliment bill scanner so users don't have to manually enter in all of the information. 
-
-## Video Script
-Welcome to billBoard, a platform built on the idea that each person should have a honest representation of their medical bills. On the pl
+billBoard’s journey does not end with HACKGT. Our team is passionate about billBoard and hopes to create a working search function to retrieve dynamic data from the database and display it on the website in real-time. In addition, we want to increase the functionality by adding additional fields, such as insurance providers and hospitals, providing a wider range of statistics, and building data visualization. Other goals include hosting the website on the public domain, applying a cost-breakdown analysis, and implementing computer vision so data does not have to be manually entered.
