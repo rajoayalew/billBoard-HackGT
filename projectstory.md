@@ -11,7 +11,7 @@ Currently, billBoard takes in data from the “post a bill” website form once 
 As of now, the website is only able to display static medical bill information pre-generated from a Python script on the “billBoard” for a specific test case. Our team is passionate about billBoard and hopes to create a working search function to retrieve dynamic data from the database and display it on the website in real-time.
 
 ## How we built it
-The billBoard website was built from a Bootstrap template with customized HTML/CSS, taking inspiration from Figma, Google Fonts API, and Coolors.co. JavaScript, Express.js, Node.js, and an SQL (SQLite) database were used in the backend. 
+The billBoard website was built from a Bootstrap template with customized HTML/CSS and Javascript, taking inspiration from Figma, Google Fonts API, and Coolors.co. Express.js, Node.js, and an SQL (SQLite) database were used in the backend. 
 
 Our team also built a Python script to automatically generate thousands of statistically-correct random numbers in order to imitate realistic user entries for the billBoard.
 
